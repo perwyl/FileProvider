@@ -81,7 +81,7 @@ You can't change the base url later. and all paths are related to this base url 
 For remote file providers authentication may be necessary:
 
 	let credential = NSURLCredential(user: "user", password: "pass", persistence: NSURLCredentialPersistence.Permanent)
-	let webdavProvider = WebDAVFileProvider(baseURL: "http://www.example.com/dav", credential: credential)
+	let webdavProvider = WebDAVFileProvider(baseURL: NSURL(string:"http://www.example.com/dav")!, credential: credential)
 
 * For Dropbox, user is clientID and password is Token which both must be retrieved via [OAuth2 API of Dropbox](https://www.dropbox.com/developers/reference/oauth-guide). There are libraries like [p2/OAuth2](https://github.com/p2/OAuth2) or [OAuthSwift](https://github.com/OAuthSwift/OAuthSwift) which can facilate the procedure to retrieve token.
 	
